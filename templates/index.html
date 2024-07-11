@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete Formulário</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Autocomplete</h1>
+        <form id="autocomplete-form">
+            <div class="form-group">
+                <label for="medicamento">Digite o medicamento:</label>
+                <input type="text" id="medicamento" name="medicamento" class="autocomplete">
+            </div>
+        </form>
+        <div id="selected-medications">
+            <h2>Medicações Selecionadas</h2>
+            <ul id="medication-list"></ul>
+        </div>
+        <button id="generate-prescription">Gerar Prescrição</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
+</body>
+</html>
